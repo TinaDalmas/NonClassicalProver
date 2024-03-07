@@ -1,4 +1,4 @@
-name:                NonClassicalProver
+name:                Logic
 version:             0.1.0.0
 synopsis:            Prover for Non-Classical Logics
 description:         Prover for Non-Classical Logics based on sequent calculi.
