@@ -1,0 +1,59 @@
+name:                NonClassicalProver
+version:             0.1.0.0
+synopsis:            Prover for Non-Classical Logics
+description:         Prover for Non-Classical Logics based on sequent calculi.
+maintainer:          Valentina Trucco Dalmas <valentinatruccodalmas@gmail.com>
+license:             GPL-3
+category:            Logic
+
+ghc-options:        -Wall
+
+extra-source-files:
+  - README.md
+  - LICENSE
+  - stack.yaml
+  - package.yaml
+  - src/Logic/PDL/Parse.y
+  - src/Logic/PDL/Lex.x
+  - exec/index.html
+
+build-tools:
+  - alex
+  - happy
+
+library:
+  source-dirs:
+    - src
+  dependencies:
+    - ansi-terminal
+    - array
+    - base >= 4.14 && < 5
+    - bytestring
+    - containers
+    - deepseq
+    - graphviz
+    - hspec
+    - process
+    - QuickCheck
+    - random
+    - temporary
+    - text
+
+executables:
+  example:
+    source-dirs: exec
+    main: example.hs
+    dependencies:
+      - base >= 4.8 && < 5
+      - Logic
+
+tests:
+  propositional:
+    source-dirs:
+      - test
+    main: propositional.hs
+    dependencies:
+      - base >= 4.7 && < 5
+      - hspec
+      - QuickCheck
+      - Logic
