@@ -2,20 +2,9 @@ module Logic.Propositional.Examples where
 
 import Logic.Propositional
 
--- | A valid formula too complicated for the List prover.
+-- | A valid formula, apparently
 weirdform :: Form
 weirdform = disSet
   [ Neg (At 'r')
-  , conSet [At 'r',Neg (conSet [disSet [At 'r']])]
-  , Neg (At 'r')
-  , Neg (conSet [disSet [disSet [At 'p']],Neg (At 'p')])
-  , Neg (Neg (conSet [Neg (At 'q')]))
+  , (At 'r')
   ]
-
-interpolateNaive :: IO ()
-interpolateNaive = do
-  let f = Con p q
-  let g = dis   q r
-  let i = simplify $ Naive.interpolate (f,g)
-  mapM_ print [f,g,i]
-  print $ i `isInterpolantFor` (f,g)
