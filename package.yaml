@@ -13,9 +13,6 @@ extra-source-files:
   - LICENSE
   - stack.yaml
   - package.yaml
-  - src/Logic/PDL/Parse.y
-  - src/Logic/PDL/Lex.x
-  - exec/index.html
 
 build-tools:
   - alex
