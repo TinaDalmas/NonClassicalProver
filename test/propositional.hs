@@ -1,8 +1,8 @@
 module Main where
 
 import Test.Hspec
-import Test.Hspec.QuickCheck
-import Test.QuickCheck
+-- import Test.Hspec.QuickCheck
+-- import Test.QuickCheck
 
 import Logic.Propositional
 import qualified Logic.Propositional.Prove.List as List
