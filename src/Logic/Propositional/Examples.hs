@@ -1,8 +1,6 @@
 module Logic.Propositional.Examples where
 
 import Logic.Propositional
-import Logic.Propositional.Interpolation
-import Logic.Propositional.Interpolation.Naive as Naive
 
 -- | A valid formula too complicated for the List prover.
 weirdform :: Form
