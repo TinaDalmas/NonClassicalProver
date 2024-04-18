@@ -41,6 +41,7 @@ executables:
     source-dirs: exec
     main: example.hs
     dependencies:
+      - parsec
       - base >= 4.8 && < 5
       - Logic
 
